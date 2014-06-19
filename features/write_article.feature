@@ -7,13 +7,9 @@ Feature: Write Articles
     Given the blog is set up
     And I am logged into the admin panel
 
+  @ok
   Scenario: Successfully write articles
     Given I am on the new article page
-    When I fill in "article_title" with "Foobar"
-    And I fill in "article__body_and_extended_editor" with "Lorem Ipsum"
-    And I press "Publish"
+    When I create a new article
     Then I should be on the admin content page
-    When I go to the home page
-    Then I should see "Foobar"
-    When I follow "Foobar"
-    Then I should see "Lorem Ipsum"
+    And the article should be created

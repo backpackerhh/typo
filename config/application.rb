@@ -99,4 +99,6 @@ module TypoBlog
     Object.send :remove_const, :FileUtils
     ::FileUtils = file_utils_no_write
   end
+
+  I18n.enforce_available_locales = false
 end
